@@ -128,37 +128,37 @@ hr{
 }
 
 
-.text_and_tittle{
+    .text_and_tittle{
     width: 80%;
-}
+    }
 
-.image_container_logo{
+    .image_container_logo{
     width: 20%;
     height: 100%;
     margin: 0vh 2vh 0vh 17vh;
     align-content: center;
-}
+    }
 
-#comunidad_logo{
+    #comunidad_logo{
     height:90%;
     width: 35%;
     padding: 0vh 1vh 1vh 1vh;
     background-color: whitesmoke;
     border-radius: 2vh;
-}
+    }
 
-#sections_1{
+    #sections_1{
     width: 85%;
     height:100%;
     padding: 3vh;
     align-content: center;
     align-items: center;
     justify-items:last baseline;
-}
+    }
 
-#sections_1 p{
+    #sections_1 p{
     margin: 5vh 0vh 5vh 0vh
-}
+    }
 
 #caurusel_section{
     display: flex;

@@ -105,15 +105,17 @@ main{
     flex-direction: row;
     justify-self: center;
     align-self: center;
-    margin: 30vh 1vh 1vh 2vh;
-    height: 100%;
+    margin: 30vh 1vh 1vh 0vh;
+    height: 70%;
     width: 90%;
-    padding : 9vh;
+    padding : 1vh 9vh;
     background: rgba(255, 255, 255, 0.6); 
     border-radius: 2vh;
     font-family: "Bebas Neue", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+    font-weight: 400;
+    font-style: normal;
+    justify-content: center;
+    align-items: center;
 }
 
 h2{
@@ -146,13 +148,33 @@ hr{
 
 #sections_1{
     width: 85%;
-    height:100%;
+    height:85%;
     padding: 3vh;
     align-content: center;
     align-items: center;
     justify-items:last baseline;
 }
 
+.subsection_sections_1{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 50%;
+    align-items: center;
+    justify-content: center;
+    
+}
+
 #sections_1 p{
-    margin: 5vh 0vh 5vh 0vh
+    display:flex;
+    margin: 0vh 10vh 0vh 5vh;
+}
+
+.comunidad_estados{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 20%;
+    align-items: center;
+    justify-content: center;
 }
