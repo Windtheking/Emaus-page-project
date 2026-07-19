@@ -162,7 +162,13 @@ hr{
     height: 50%;
     align-items: center;
     justify-content: center;
+    padding: 12vh 0vh 0vh 0vh;
     
+}
+
+#know_our_states{
+    display: flex;
+    margin: 0vh 10vh 0vh 5vh;
 }
 
 #sections_1 p{
