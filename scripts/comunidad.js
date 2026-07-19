@@ -1,10 +1,7 @@
 var main_container_page_comunidad = document.getElementById("sections_1");
 var subsection_sections_1 = document.createElement("div");
 subsection_sections_1.classList.add('subsection_sections_1');
-// main_container_page_comunidad.append();
 
-document.addEventListener("DOMContentLoaded", function() {
-})
 
 var main_content_tittles = {
         tittle_1: "Estado de matrimonio",
@@ -42,7 +39,13 @@ for (const property in main_content_tittles ) {
     }
 }
 
+var moreButton = document.getElementById("More_button")
+var apearing_options_menu_more = document.getElementById("apearing_options_menu_more")
 
-
-
-console.log("Se ha cargado la página de comunidad correctamente."+ main_content_tittles.tittle_1);
+moreButton.addEventListener("click", function(){
+    if (apearing_options_menu_more.style.display === "none"){
+        apearing_options_menu_more.style.display = "flex"
+    }else{
+        apearing_options_menu_more.style.display = "none"
+    }
+})
