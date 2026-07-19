@@ -184,3 +184,44 @@ hr{
     align-items: center;
     justify-content: center;
 }
+
+button{
+    display: flex;
+    border: none;
+    background-color: transparent;
+    color: white;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: medium;
+}
+
+#apearing_options_menu_more{
+    display: none;
+    position: fixed;
+    align-self:flex-end;
+    transform: translate(-31vh,18vh);
+    
+
+    ul{
+        background: linear-gradient(
+            90deg, 
+            #7a4d91 0%,    /* Violeta claro profundo (sombras suavizadas) */
+            #9c6cb4 20%,   /* Púrpura litúrgico claro (color base luminoso) */
+            #b88cd8 80%, 
+            #b88cd8 80%,   /* Violeta pastel iluminado (reflejo de luz suave) */
+            #5c3570 100%   /* Contraste suave de recogimiento */
+        );
+        list-style: none;
+        padding: 1vh;
+        border-radius: 1vh;
+    }
+
+    li{
+        font-family: "Bebas Neue", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: medium;
+        padding: 4px;
+    }
+}
