@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/comunidad.css">
+    <link rel="stylesheet" href="../styles/eventos.css">
     <link rel="stylesheet" href="https://cloudflare.com" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
@@ -17,7 +17,7 @@
                 <h3>
                     <i>
                         Casa de Oracion Emaus.
-                    </i> 
+                    </i>
                 </h3>
             </div>
             <div class="image_container_logo">
@@ -26,12 +26,12 @@
         </section>
         <nav>
             <ul>
-                <li id="Inicio_button"><a href="https://windtheking.github.io/Emaus-page-project/index.html">Inicio</a></li>
-                <li id="Comunidad_button"><a href="https://windtheking.github.io/Emaus-page-project/templates/comunidad.html">Comunidad</a></li>
-                <li id="Fundacion_button"><a href="https://windtheking.github.io/Emaus-page-project/templates/quienes_somos.html">¿Quienes somos?</a></li>
-                <li id="Conformacion_button"><a href="https://windtheking.github.io/Emaus-page-project/templates/conformacion.html">Conformacion</a></li>
-                <li id="Eventos_button"><a href="https://windtheking.github.io/Emaus-page-project/templates/eventos.html">Eventos</a></li>
-                <li id="More_button"><Button>More</Button></li>
+                <li id="Inicio_button" class="list-general-selection"><a href="https://windtheking.github.io/Emaus-page-project/index.html">Inicio</a></li>
+                <li id="Comunidad_button" class="list-general-selection"><a href="https://windtheking.github.io/Emaus-page-project/templates/comunidad.html">Comunidad</a></li>
+                <li id="Fundacion_button" class="list-general-selection"><a href="https://windtheking.github.io/Emaus-page-project/templates/quienes_somos.html">¿Quienes somos?</a></li>
+                <li id="Conformacion_button" class="list-general-selection"><a href="https://windtheking.github.io/Emaus-page-project/templates/conformacion.html">Conformacion</a></li>
+                <li id="Eventos_button" class="list-general-selection"><a href="https://windtheking.github.io/Emaus-page-project/templates/eventos.html">Eventos</a></li>
+                <li id="More_button" class="list-general-selection"><Button>More</Button></li>
             </ul>
         </nav>
         <div id="apearing_options_menu_more">
@@ -46,11 +46,40 @@
         </div>
     </header>
     <main>
-        <div id="sections_1">
-             <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/work-in-progress-design-template-6cc0b86afbb81d0528f26113e3ec02cf_screen.jpg?ts=1698307882" alt="work in progress">
-        </div>
+        <section id="events_list_section">
+            <!-- Las tarjetas de eventos se generan dinámicamente desde scripts/eventos.controller.js -->
+        </section>
+        <aside id="event_form_section">
+            <h2>Añadir evento</h2>
+            <form id="event_form">
+                <label for="event_fecha">Fecha
+                    <input type="date" id="event_fecha" name="fecha" required>
+                </label>
+                <label for="event_hora">Hora (opcional)
+                    <input type="time" id="event_hora" name="hora">
+                </label>
+                <label for="event_lugar">Lugar
+                    <input type="text" id="event_lugar" name="lugar" placeholder="Ej: Casa de Oración Emaús" required>
+                </label>
+                <label for="event_contexto">Contexto
+                    <textarea id="event_contexto" name="contexto" rows="4" placeholder="Describe el evento" required></textarea>
+                </label>
+                <label for="event_expira_cantidad">Eliminar automáticamente después de (opcional)</label>
+                <div class="expira-group">
+                    <input type="number" id="event_expira_cantidad" name="expiraCantidad" min="1" placeholder="Cantidad">
+                    <select id="event_expira_unidad" name="expiraUnidad">
+                        <option value="horas">horas</option>
+                        <option value="dias">días</option>
+                        <option value="semanas">semanas</option>
+                    </select>
+                </div>
+                <button type="submit">Añadir evento</button>
+            </form>
+        </aside>
     </main>
 </body>
 
-<!-- <script src="../scripts/comunidad.js"> -->
-</script>
+<script src="../scripts/eventos.repository.js"></script>
+<script src="../scripts/eventos.service.js"></script>
+<script src="../scripts/eventos.controller.js"></script>
+</html>
